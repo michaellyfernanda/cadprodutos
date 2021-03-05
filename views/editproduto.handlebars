@@ -1,0 +1,16 @@
+<h1>Editar Produtos</h1>
+<form action="/edit/{{{codigo}}}" method="POST">
+
+    <label>Código: {{codigo}}</label><br><br>
+    <label>Descrição: </label>
+    <input type="text" name="descricao" value="{{descricao}}"><br><br>
+
+    <label>Quantidade:</label>
+    <input type="number" name="quantidade" value="{{quantidade}}"><br><br>
+
+    <label>Preço: </label>
+    <input type="text" name="preco" value="{{preco}}"><br><br>
+
+    <button type="submit">Enviar</button>
+
+</form>

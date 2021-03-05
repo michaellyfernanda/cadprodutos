@@ -1,0 +1,38 @@
+<h1>Produtos</h1>
+<form method="POST">
+    <table style="width:100%">
+        <tr>
+            <th>Código</th>
+            <th>Descrição</th>
+            <th>Quantidade</th>
+            <th>Preço</th>
+        </tr>
+        {{#each lista}}
+        <tr>
+            <th>{{this.codigo}}</th>
+            <th>{{this.descricao}}</th>
+            <th>{{this.quantidade}}</th>
+            <th>{{this.preco}}</th>
+            <th><button type="submit" formaction="/delete/{{{codigo}}}">DELETAR</button> <button type="submit" formaction="/getProduto/{{{codigo}}}">EDITAR</button></th>
+        </tr>
+        {{/each}}
+    </table>
+</form>
+
+<style>
+    table,
+    th,
+    td {
+        border: 1px solid black;
+        border-collapse: collapse;
+    }
+
+    th,
+    td {
+        padding: 5px;
+    }
+
+    th {
+        text-align: left;
+    }
+</style>
